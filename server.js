@@ -29,7 +29,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api/whoami", async(req,res)=> { 
   let header = await req.headers;
-  await res.json({ipadress: req.connection.remoteAddress,
+  await res.json({ipaddress: req.connection.remoteAddress,
   language: header['accept-language'],
   software: header['user-agent']})
 })
